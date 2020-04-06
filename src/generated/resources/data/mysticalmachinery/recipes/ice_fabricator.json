@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "QWQ",
+    "QMQ",
+    "LLL"
+  ],
+  "key": {
+    "M": {
+      "item": "mysticalpowers:quicksilver_machine_frame"
+    },
+    "Q": {
+      "tag": "forge:ingots/quicksilver"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    },
+    "L": {
+      "item": "minecraft:light_blue_wool"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:ice_fabricator"
+  }
+}

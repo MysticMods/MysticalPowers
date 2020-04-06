@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IXI",
+    "XGX",
+    "IXI"
+  ],
+  "key": {
+    "X": {
+      "tag": "forge:stone"
+    },
+    "G": {
+      "tag": "forge:glass"
+    },
+    "I": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:stone_machine_frame"
+  }
+}

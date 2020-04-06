@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "mysticalpowers:paper_from_sawdust"
+    ]
+  },
+  "criteria": {
+    "has_sawdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:dusts/wooden"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "mysticalpowers:paper_from_sawdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sawdust",
+      "has_the_recipe"
+    ]
+  ]
+}

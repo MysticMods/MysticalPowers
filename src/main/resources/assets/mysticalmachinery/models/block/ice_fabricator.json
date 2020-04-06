@@ -1,0 +1,10 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "mysticalpowers:block/block_fabricator_base",
+	"textures": {
+		"block": "block/ice",
+		"glass": "mysticalpowers:block/machine_frame_glass",
+		"body": "mysticalworld:block/quicksilver_block",
+		"particle": "mysticalworld:block/quicksilver_block"
+	}
+}

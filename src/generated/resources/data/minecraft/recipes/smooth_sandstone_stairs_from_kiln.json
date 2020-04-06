@@ -1,0 +1,10 @@
+{
+  "type": "mysticalpowers:kiln",
+  "ingredient": {
+    "item": "minecraft:sandstone_stairs"
+  },
+  "result": "minecraft:smooth_sandstone_stairs",
+  "experience": 0.35,
+  "cookingtime": 80,
+  "itemcount": 1
+}

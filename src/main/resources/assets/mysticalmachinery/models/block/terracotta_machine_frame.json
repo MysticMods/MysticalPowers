@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "mysticalpowers:block/machine_frame_base",
+	"textures": {
+		"body": "block/terracotta"
+	}
+}

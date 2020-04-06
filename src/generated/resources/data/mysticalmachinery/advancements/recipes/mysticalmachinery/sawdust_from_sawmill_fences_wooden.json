@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "mysticalpowers:sawdust_from_sawmill_fences_wooden"
+    ]
+  },
+  "criteria": {
+    "has_fences_wooden": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:fences/wooden"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "mysticalpowers:sawdust_from_sawmill_fences_wooden"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_fences_wooden",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "mysticalpowers:kiln",
+  "ingredient": {
+    "item": "minecraft:gray_terracotta"
+  },
+  "result": "minecraft:gray_glazed_terracotta",
+  "experience": 0.35,
+  "cookingtime": 80,
+  "itemcount": 1
+}

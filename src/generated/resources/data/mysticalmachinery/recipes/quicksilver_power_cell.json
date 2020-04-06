@@ -1,0 +1,22 @@
+{
+  "type": "mysticalpowers:battery",
+  "pattern": [
+    "CCC",
+    "LBL",
+    "CLC"
+  ],
+  "key": {
+    "C": {
+      "tag": "forge:ingots/quicksilver"
+    },
+    "L": {
+      "item": "mysticalpowers:silver_power_cell"
+    },
+    "B": {
+      "tag": "forge:storage_blocks/redstone"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:quicksilver_power_cell"
+  }
+}

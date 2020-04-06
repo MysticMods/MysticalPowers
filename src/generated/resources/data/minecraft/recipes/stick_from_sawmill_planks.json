@@ -1,0 +1,10 @@
+{
+  "type": "mysticalpowers:sawmill",
+  "ingredient": {
+    "tag": "minecraft:planks"
+  },
+  "result": "minecraft:stick",
+  "experience": 0.35,
+  "cookingtime": 30,
+  "itemcount": 3
+}

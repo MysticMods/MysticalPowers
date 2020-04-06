@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "mysticalpowers:block/block_fabricator_base",
+	"textures": {
+		"block": "block/red_sand"
+	}
+}

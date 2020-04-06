@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SCS",
+    "SMS",
+    "GGG"
+  ],
+  "key": {
+    "M": {
+      "item": "mysticalpowers:slime_machine_frame"
+    },
+    "S": {
+      "item": "minecraft:slime_ball"
+    },
+    "C": {
+      "tag": "forge:storage_blocks/copper"
+    },
+    "G": {
+      "item": "minecraft:green_glazed_terracotta"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:slime_fabricator"
+  }
+}

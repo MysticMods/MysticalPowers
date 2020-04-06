@@ -1,0 +1,22 @@
+{
+  "type": "mysticalpowers:battery",
+  "pattern": [
+    "CPC",
+    "RPR",
+    "CPC"
+  ],
+  "key": {
+    "C": {
+      "tag": "forge:ingots/copper"
+    },
+    "P": {
+      "tag": "mysticalworld:base_powercells"
+    },
+    "R": {
+      "tag": "forge:dusts/redstone"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:copper_power_cell"
+  }
+}

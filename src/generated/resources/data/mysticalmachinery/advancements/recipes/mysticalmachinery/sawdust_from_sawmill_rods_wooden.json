@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "mysticalpowers:sawdust_from_sawmill_rods_wooden"
+    ]
+  },
+  "criteria": {
+    "has_rods_wooden": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:rods/wooden"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "mysticalpowers:sawdust_from_sawmill_rods_wooden"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_rods_wooden",
+      "has_the_recipe"
+    ]
+  ]
+}

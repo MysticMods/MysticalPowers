@@ -1,0 +1,10 @@
+{
+  "type": "mysticalpowers:sawmill",
+  "ingredient": {
+    "tag": "minecraft:wooden_fences"
+  },
+  "result": "mysticalpowers:sawdust",
+  "experience": 0.35,
+  "cookingtime": 30,
+  "itemcount": 10
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mysticalpowers:item/tin_power_cell"
+  }
+}

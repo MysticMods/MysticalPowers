@@ -1,0 +1,10 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "mysticalpowers:block/block_fabricator_base",
+	"textures": {
+		"block": "block/soul_sand",
+		"glass": "mysticalpowers:block/machine_frame_glass",
+		"body": "block/red_nether_bricks",
+		"particle": "block/red_nether_bricks"
+	}
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "mysticalpowers:sawdust_from_sawmill_wooden_pressure_plates"
+    ]
+  },
+  "criteria": {
+    "has_wooden_pressure_plates": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:wooden_pressure_plates"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "mysticalpowers:sawdust_from_sawmill_wooden_pressure_plates"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wooden_pressure_plates",
+      "has_the_recipe"
+    ]
+  ]
+}

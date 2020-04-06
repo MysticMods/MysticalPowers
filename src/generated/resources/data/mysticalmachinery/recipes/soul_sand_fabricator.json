@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GNG",
+    "gMg",
+    "BBB"
+  ],
+  "key": {
+    "M": {
+      "item": "mysticalpowers:red_nether_machine_frame"
+    },
+    "G": {
+      "tag": "forge:ingots/gold"
+    },
+    "g": {
+      "tag": "forge:storage_blocks/gold"
+    },
+    "N": {
+      "item": "minecraft:soul_sand"
+    },
+    "B": {
+      "item": "minecraft:red_nether_bricks"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:soul_sand_fabricator"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "mysticalpowers:end_stone_fabricator"
+    ]
+  },
+  "criteria": {
+    "has_chorus_flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:chorus_flower"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "mysticalpowers:end_stone_fabricator"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_chorus_flower",
+      "has_the_recipe"
+    ]
+  ]
+}

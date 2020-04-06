@@ -1,0 +1,104 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "einfach:block/accumulator/grate",
+		"1": "einfach:block/accumulator/cell",
+		"2": "einfach:block/accumulator/plate",
+		"3": "einfach:block/accumulator/cell_top",
+		"4": "einfach:block/accumulator/connector",
+		"particle": "einfach:block/accumulator/grate"
+	},
+	"elements": [
+		{
+			"name": "ground_plate",
+			"from": [0, 0, 0],
+			"to": [16, 4, 16],
+			"faces": {
+				"north": {"uv": [0, 12, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 12, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 12, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 12, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		},
+		{
+			"name": "west_plate",
+			"from": [0, 4, 0],
+			"to": [0, 15, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 0, 8], "texture": "#missing"},
+				"east": {"uv": [0, 2, 16, 12], "texture": "#0"},
+				"south": {"uv": [0, 2, 16, 12], "texture": "#missing"},
+				"west": {"uv": [0, 2, 16, 12], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 16], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "east_plate",
+			"from": [16, 4, 0],
+			"to": [16, 15, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 0, 8], "texture": "#missing"},
+				"east": {"uv": [0, 2, 16, 12], "texture": "#0"},
+				"south": {"uv": [0, 2, 16, 12], "texture": "#missing"},
+				"west": {"uv": [0, 2, 16, 12], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 16], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "north_plate",
+			"from": [0, 4, 0],
+			"to": [16, 15, 0],
+			"faces": {
+				"north": {"uv": [0, 2, 16, 12], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 8], "texture": "#missing"},
+				"south": {"uv": [0, 2, 16, 12], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 8], "texture": "#missing"},
+				"up": {"uv": [0, 0, 16, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 16, 0], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "south_plate",
+			"from": [0, 4, 16],
+			"to": [16, 15, 16],
+			"faces": {
+				"north": {"uv": [0, 2, 16, 12], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 8], "texture": "#missing"},
+				"south": {"uv": [0, 2, 16, 12], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 8], "texture": "#missing"},
+				"up": {"uv": [0, 0, 16, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 16, 0], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "cell",
+			"from": [1, 4, 1],
+			"to": [15, 16, 15],
+			"faces": {
+				"north": {"uv": [1, 3, 15, 15], "texture": "#1"},
+				"east": {"uv": [1, 3, 15, 15], "texture": "#1"},
+				"south": {"uv": [1, 3, 15, 15], "texture": "#1"},
+				"west": {"uv": [1, 3, 15, 15], "texture": "#1"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#3"},
+				"down": {"uv": [0, 0, 14, 14], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "connector",
+			"from": [2, 17, 2],
+			"to": [14, 17, 14],
+			"faces": {
+				"north": {"uv": [0, 0, 12, 0], "texture": "#missing"},
+				"east": {"uv": [0, 0, 12, 0], "texture": "#missing"},
+				"south": {"uv": [0, 0, 12, 0], "texture": "#missing"},
+				"west": {"uv": [0, 0, 12, 0], "texture": "#missing"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#4"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#4"}
+			}
+		}
+	]
+}

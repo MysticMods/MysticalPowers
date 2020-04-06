@@ -1,0 +1,17 @@
+{
+  "block.cookie_generator.munch": {
+    "category": "block",
+    "sounds": [
+       "mysticalpowers:mob/phantom/bite1"
+    ],
+    "subtitle": "mysticalpowers.subtitles.block.cookie_generator.munch"
+  },
+  "block.end_stone_generator.generate": {
+    "category": "block",
+    "sounds": [
+      "mysticalpowers:entity/endereye/dead1",
+      "mysticalpowers:entity/endereye/dead2"
+    ],
+    "subtitle": "mysticalpowers.subtitles.block.end_stone_generator.generate"
+  }
+}

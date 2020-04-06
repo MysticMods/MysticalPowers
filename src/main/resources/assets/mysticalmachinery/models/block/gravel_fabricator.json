@@ -1,0 +1,10 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "mysticalpowers:block/block_fabricator_base",
+	"textures": {
+		"block": "block/gravel",
+		"glass": "mysticalpowers:block/machine_frame_glass",
+		"body": "block/stone",
+		"particle": "block/stone"
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "LML",
+    " F "
+  ],
+  "key": {
+    "M": {
+      "item": "mysticalpowers:wood_machine_frame"
+    },
+    "L": {
+      "tag": "minecraft:logs"
+    },
+    "S": {
+      "item": "minecraft:stonecutter"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:sawmill"
+  }
+}
