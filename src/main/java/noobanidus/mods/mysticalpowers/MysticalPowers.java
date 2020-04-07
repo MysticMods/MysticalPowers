@@ -12,6 +12,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import noobanidus.mods.mysticalpowers.config.ConfigManager;
+import noobanidus.mods.mysticalpowers.events.Mappings;
 import noobanidus.mods.mysticalpowers.init.*;
 import noobanidus.mods.mysticalpowers.registrate.CustomRegistrate;
 import noobanidus.mods.mysticalpowers.setup.ClientSetup;
@@ -47,12 +48,12 @@ public class MysticalPowers {
 
     ModItems.load();
     ModBlocks.load();
-    ModEntities.load();
     ModTiles.load();
     ModRecipes.load();
     ModSounds.load();
     ModLang.load();
     ModTags.load();
+    Mappings.load();
 
     ConfigManager.loadConfig(ConfigManager.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve(MODID + "-common.toml"));
   }

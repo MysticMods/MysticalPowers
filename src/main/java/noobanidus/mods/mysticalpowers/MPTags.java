@@ -19,7 +19,7 @@ public class MPTags {
     }
 
     static Tag<Item> modTag(String name) {
-      return tag(MysticalWorld.MODID, name);
+      return tag(MysticalPowers.MODID, name);
     }
 
     static Tag<Item> compatTag(String name) {
@@ -32,7 +32,7 @@ public class MPTags {
   }
 
   static <T extends Tag<?>> T modTag(Function<ResourceLocation, T> creator, String name) {
-    return tag(creator, MysticalWorld.MODID, name);
+    return tag(creator, MysticalPowers.MODID, name);
   }
 
   static <T extends Tag<?>> T compatTag(Function<ResourceLocation, T> creator, String name) {

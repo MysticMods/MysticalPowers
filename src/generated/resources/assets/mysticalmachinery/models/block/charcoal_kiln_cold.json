@@ -1,7 +1,0 @@
-{
-  "parent": "mysticalpowers:block/charcoal_kiln",
-  "textures": {
-    "kiln_face": "mysticalpowers:block/charcoal_kiln_face",
-    "kiln_bottom": "mysticalpowers:block/charcoal_kiln_bottom"
-  }
-}
