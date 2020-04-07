@@ -1,0 +1,22 @@
+{
+  "type": "mysticalpowers:battery",
+  "pattern": [
+    "LRL",
+    "RBR",
+    "LRL"
+  ],
+  "key": {
+    "L": {
+      "tag": "forge:ingots/lead"
+    },
+    "B": {
+      "tag": "forge:storage_blocks/redstone"
+    },
+    "R": {
+      "tag": "forge:dusts/redstone"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:lead_power_cell"
+  }
+}

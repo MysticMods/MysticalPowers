@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "mysticalpowers:terracotta_machine_frame"
+    ]
+  },
+  "criteria": {
+    "has_forge:terracotta": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:terracotta"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "mysticalpowers:terracotta_machine_frame"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_forge:terracotta",
+      "has_the_recipe"
+    ]
+  ]
+}

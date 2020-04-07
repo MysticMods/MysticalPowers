@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GNG",
+    "GMG",
+    "BBB"
+  ],
+  "key": {
+    "M": {
+      "item": "mysticalpowers:nether_machine_frame"
+    },
+    "G": {
+      "tag": "forge:ingots/gold"
+    },
+    "N": {
+      "tag": "forge:netherrack"
+    },
+    "B": {
+      "item": "minecraft:nether_bricks"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:netherrack_fabricator"
+  }
+}

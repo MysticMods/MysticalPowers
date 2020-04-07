@@ -74,7 +74,7 @@ public class Mappings {
     return result;
   }
 
-  static {
+  public static void load () {
     // This is so ugly
     List<RegistryEntry<?>> blocks = Arrays.asList(ModBlocks.COOKIE_GENERATOR, ModBlocks.WATER_FABRICATOR, ModBlocks.END_STONE_FABRICATOR, ModBlocks.SAND_FABRICATOR, ModBlocks.RED_SAND_FABRICATOR, ModBlocks.CLAY_FABRICATOR, ModBlocks.NETHERRACK_FABRICATOR, ModBlocks.SOUL_SAND_FABRICATOR, ModBlocks.SLIME_FABRICATOR, ModBlocks.ICE_FABRICATOR, ModBlocks.SNOW_FABRICATOR, ModBlocks.DIRT_FABRICATOR, ModBlocks.GRAVEL_FABRICATOR);
     blocks.addAll(ModBlocks.MACHINE_FRAMES.values());
@@ -97,8 +97,5 @@ public class Mappings {
 
     mappings.put(ForgeRegistries.TILE_ENTITIES,
         makeMappings(ModTiles.END_STONE_FABRICATOR, ModTiles.BLOCK_FABRICATOR, ModTiles.WATER_FABRICATOR, ModTiles.COOKIE_GENERATOR));
-  }
-
-  public static void load() {
   }
 }

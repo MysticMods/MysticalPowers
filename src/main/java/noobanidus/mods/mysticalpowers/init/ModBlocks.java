@@ -10,7 +10,10 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.Items;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.Tags;
+import noobanidus.mods.mysticalpowers.MysticalPowers;
 import noobanidus.mods.mysticalpowers.blocks.*;
 import noobanidus.mods.mysticalpowers.config.ConfigManager;
 
@@ -55,6 +58,9 @@ public class ModBlocks {
 
   public static RegistryEntry<EndStoneFabricatorBlock> END_STONE_FABRICATOR = REGISTRATE.block("end_stone_fabricator", Material.IRON, EndStoneFabricatorBlock::new)
       .properties(o -> o.hardnessAndResistance(4.5f).sound(SoundType.METAL))
+      .blockstate((ctx, p) -> p.getVariantBuilder(ctx.getEntry()).forAllStates((state) -> ConfiguredModel.builder()
+          .modelFile(p.getExistingFile(new ResourceLocation(MysticalPowers.MODID, "block/end_stone_fabricator")))
+          .build()))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()

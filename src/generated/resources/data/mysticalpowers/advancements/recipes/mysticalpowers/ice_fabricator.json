@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "mysticalpowers:ice_fabricator"
+    ]
+  },
+  "criteria": {
+    "has_quicksilver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/quicksilver"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "mysticalpowers:ice_fabricator"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_quicksilver",
+      "has_the_recipe"
+    ]
+  ]
+}

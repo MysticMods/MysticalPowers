@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "mysticalpowers:nether_machine_frame"
+    ]
+  },
+  "criteria": {
+    "has_forge:nether_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:nether_bricks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "mysticalpowers:nether_machine_frame"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_forge:nether_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

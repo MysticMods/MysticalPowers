@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DMD",
+    "BBB"
+  ],
+  "key": {
+    "M": {
+      "item": "mysticalpowers:stone_machine_frame"
+    },
+    "D": {
+      "item": "minecraft:dirt"
+    },
+    "B": {
+      "tag": "minecraft:stone_bricks"
+    }
+  },
+  "result": {
+    "item": "mysticalpowers:dirt_fabricator"
+  }
+}

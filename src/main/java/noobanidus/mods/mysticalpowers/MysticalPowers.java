@@ -53,7 +53,6 @@ public class MysticalPowers {
     ModSounds.load();
     ModLang.load();
     ModTags.load();
-    Mappings.load();
 
     ConfigManager.loadConfig(ConfigManager.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve(MODID + "-common.toml"));
   }
