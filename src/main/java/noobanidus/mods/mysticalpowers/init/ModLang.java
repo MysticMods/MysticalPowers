@@ -4,6 +4,7 @@ import static noobanidus.mods.mysticalpowers.MysticalPowers.REGISTRATE;
 
 public class ModLang {
   static {
+    REGISTRATE.addRawLang("itemGroup.mysticalpowers", "Mystical Powers");
     REGISTRATE.addRawLang("mysticalpowers.tile.cookie_generator.contains", "Contains %s/%sFCE (Forge Cookie Energy)");
     REGISTRATE.addRawLang("mysticalpowers.tile.end_stone_generator.contains", "Contains %s End Stone (%s/%s FE)");
     REGISTRATE.addRawLang("mysticalpowers.tile.block_generator.contains", "Contains %s %s (%s/%s FE)");

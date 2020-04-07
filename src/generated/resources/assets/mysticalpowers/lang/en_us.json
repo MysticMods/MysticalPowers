@@ -27,6 +27,7 @@
   "item.mysticalpowers.quicksilver_power_cell": "Quicksilver Power Cell",
   "item.mysticalpowers.silver_power_cell": "Silver Power Cell",
   "item.mysticalpowers.tin_power_cell": "Tin Power Cell",
+  "itemGroup.mysticalpowers": "Mystical Powers",
   "mysticalpowers.energy_item.tooltip": "Energy: %s/%s FE",
   "mysticalpowers.subtitles.block.charcoal_kiln.fire_crackle": "Charcoal Kiln crackles",
   "mysticalpowers.subtitles.block.cookie_generator.munch": "Generator munches",

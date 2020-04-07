@@ -1,6 +1,7 @@
 package noobanidus.mods.mysticalpowers.events;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
 import com.tterrag.registrate.util.RegistryEntry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -76,7 +77,7 @@ public class Mappings {
 
   public static void load () {
     // This is so ugly
-    List<RegistryEntry<?>> blocks = Arrays.asList(ModBlocks.COOKIE_GENERATOR, ModBlocks.WATER_FABRICATOR, ModBlocks.END_STONE_FABRICATOR, ModBlocks.SAND_FABRICATOR, ModBlocks.RED_SAND_FABRICATOR, ModBlocks.CLAY_FABRICATOR, ModBlocks.NETHERRACK_FABRICATOR, ModBlocks.SOUL_SAND_FABRICATOR, ModBlocks.SLIME_FABRICATOR, ModBlocks.ICE_FABRICATOR, ModBlocks.SNOW_FABRICATOR, ModBlocks.DIRT_FABRICATOR, ModBlocks.GRAVEL_FABRICATOR);
+    List<RegistryEntry<?>> blocks = Lists.newArrayList(ModBlocks.COOKIE_GENERATOR, ModBlocks.WATER_FABRICATOR, ModBlocks.END_STONE_FABRICATOR, ModBlocks.SAND_FABRICATOR, ModBlocks.RED_SAND_FABRICATOR, ModBlocks.CLAY_FABRICATOR, ModBlocks.NETHERRACK_FABRICATOR, ModBlocks.SOUL_SAND_FABRICATOR, ModBlocks.SLIME_FABRICATOR, ModBlocks.ICE_FABRICATOR, ModBlocks.SNOW_FABRICATOR, ModBlocks.DIRT_FABRICATOR, ModBlocks.GRAVEL_FABRICATOR);
     blocks.addAll(ModBlocks.MACHINE_FRAMES.values());
 
     mappings.put(ForgeRegistries.BLOCKS,
