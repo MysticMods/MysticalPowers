@@ -74,6 +74,6 @@ public class FabricatorConfig {
     configMaxTransfer = builder.comment("Maximum amount of FE that can be transferred into the block per tick").defineInRange("maxTransfer", maxTransfer, 0, Integer.MAX_VALUE);
     configOperationCost = builder.comment("Cost to create one " + name + " per operation").defineInRange("operationCost", operationCost, 0, Integer.MAX_VALUE);
     configFrequency = builder.comment("Frequency (in ticks) that " + name + " is produced").defineInRange("frequency", frequency, 0, Integer.MAX_VALUE);
-    builder.pop();
+    //builder.pop();
   }
 }

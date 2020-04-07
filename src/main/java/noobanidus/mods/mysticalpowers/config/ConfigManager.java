@@ -20,7 +20,7 @@ public class ConfigManager {
   static {
     COMMON_BUILDER.push("Fabricators");
     registerFabricators();
-    COMMON_BUILDER.pop();
+    //COMMON_BUILDER.pop();
     COMMON_CONFIG = COMMON_BUILDER.build();
   }
 
