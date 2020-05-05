@@ -2,7 +2,9 @@ package noobanidus.mods.mysticalpowers.tiles;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.ITickableTileEntity;
@@ -63,7 +65,10 @@ public class FabricatorTile extends EnergyTileEntity implements ITickableTileEnt
     this.FREQUENCY = compound.getInt("FREQUENCY");
     this.MAX_FE = compound.getInt("MAX_FE");
     this.MAX_FE_TRANSFER = compound.getInt("MAX_FE_TRANSFER");
-    this.block = () -> ((BlockItem) ItemStack.read(compound.getCompound("itemstack")).getItem()).getBlock();
+    Item item = ItemStack.read(compound.getCompound("itemstack")).getItem();
+    if (item != Items.AIR && item instanceof BlockItem) {
+      this.block = ((BlockItem) item)::getBlock;
+    }
     if (this.energyStorage == null) {
       this.energyStorage = new SettableEnergyStorage(MAX_FE, MAX_FE_TRANSFER);
       this.energyHandler = LazyOptional.of(() -> this.energyStorage);
