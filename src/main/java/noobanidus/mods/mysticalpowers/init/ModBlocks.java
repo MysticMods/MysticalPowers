@@ -10,6 +10,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.Items;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.Tags;
@@ -67,11 +68,11 @@ public class ModBlocks {
       .register();
 
   private static NonNullFunction<Block.Properties, FabricatorBlock> fabricatorBlock(Supplier<? extends
-      Block> block, String config) {
+      IItemProvider> block, String config) {
     return (b) -> new FabricatorBlock(b, block, ConfigManager.get(config).values());
   }
 
-  private static NonNullFunction<Block.Properties, FabricatorBlock> fabricatorBlock(Block block, String config) {
+  private static NonNullFunction<Block.Properties, FabricatorBlock> fabricatorBlock(IItemProvider block, String config) {
     return fabricatorBlock(() -> block, config);
   }
 
@@ -115,7 +116,7 @@ public class ModBlocks {
       .build()
       .register();
 
-  public static RegistryEntry<FabricatorBlock> SLIME_FABRICATOR = REGISTRATE.block("slime_fabricator", Material.IRON, fabricatorBlock(Blocks.SLIME_BLOCK, "slime"))
+  public static RegistryEntry<FabricatorBlock> SLIME_FABRICATOR = REGISTRATE.block("slime_fabricator", Material.IRON, fabricatorBlock(Items.SLIME_BALL, "slime"))
       .properties(FABRICATOR_PROPS)
       .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()

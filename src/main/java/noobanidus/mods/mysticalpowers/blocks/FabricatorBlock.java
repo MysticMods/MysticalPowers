@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Hand;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -20,13 +21,13 @@ import java.util.function.Supplier;
 
 @SuppressWarnings("deprecation")
 public class FabricatorBlock extends Block {
-  private final Supplier<? extends Block> block;
+  private final Supplier<? extends IItemProvider> block;
   private final int MAX_FE;
   private final int MAX_FE_TRANSFER;
   private final int FE_OPERATION;
   private final int FREQUENCY;
 
-  public FabricatorBlock(Properties properties, Supplier<? extends Block> block, int ... values) {
+  public FabricatorBlock(Properties properties, Supplier<? extends IItemProvider> block, int ... values) {
     super(properties);
     this.block = block;
     if (values.length != 4) {

@@ -1,6 +1,5 @@
 package noobanidus.mods.mysticalpowers;
 
-import epicsquid.mysticalworld.init.ModEntities;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
@@ -12,7 +11,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import noobanidus.mods.mysticalpowers.config.ConfigManager;
-import noobanidus.mods.mysticalpowers.events.Mappings;
 import noobanidus.mods.mysticalpowers.init.*;
 import noobanidus.mods.mysticalpowers.registrate.CustomRegistrate;
 import noobanidus.mods.mysticalpowers.setup.ClientSetup;

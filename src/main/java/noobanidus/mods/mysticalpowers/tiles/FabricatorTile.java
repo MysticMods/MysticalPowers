@@ -1,14 +1,12 @@
 package noobanidus.mods.mysticalpowers.tiles;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.util.Direction;
+import net.minecraft.util.IItemProvider;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -23,7 +21,7 @@ import java.util.function.Supplier;
 public class FabricatorTile extends EnergyTileEntity implements ITickableTileEntity {
   private int FE_OPERATION = 50;
   private int FREQUENCY = 250;
-  private Supplier<? extends Block> block;
+  private Supplier<? extends IItemProvider> block;
   private int MAX_FE = 1000000;
   private int MAX_FE_TRANSFER = 200;
 
@@ -35,7 +33,7 @@ public class FabricatorTile extends EnergyTileEntity implements ITickableTileEnt
     super(ModTiles.BLOCK_FABRICATOR.get());
   }
 
-  public FabricatorTile(Supplier<? extends Block> block, int MAX_FE, int MAX_FE_TRANSFER, int FE_OPERATION, int FREQUENCY) {
+  public FabricatorTile(Supplier<? extends IItemProvider> block, int MAX_FE, int MAX_FE_TRANSFER, int FE_OPERATION, int FREQUENCY) {
     this();
     this.energyStorage = new SettableEnergyStorage(MAX_FE, MAX_FE_TRANSFER);
     this.energyHandler = LazyOptional.of(() -> this.energyStorage);
@@ -65,10 +63,7 @@ public class FabricatorTile extends EnergyTileEntity implements ITickableTileEnt
     this.FREQUENCY = compound.getInt("FREQUENCY");
     this.MAX_FE = compound.getInt("MAX_FE");
     this.MAX_FE_TRANSFER = compound.getInt("MAX_FE_TRANSFER");
-    Item item = ItemStack.read(compound.getCompound("itemstack")).getItem();
-    if (item != Items.AIR && item instanceof BlockItem) {
-      this.block = ((BlockItem) item)::getBlock;
-    }
+    this.block = () -> ItemStack.read(compound.getCompound("itemstack")).getItem();
     if (this.energyStorage == null) {
       this.energyStorage = new SettableEnergyStorage(MAX_FE, MAX_FE_TRANSFER);
       this.energyHandler = LazyOptional.of(() -> this.energyStorage);
@@ -96,7 +91,7 @@ public class FabricatorTile extends EnergyTileEntity implements ITickableTileEnt
     return stoneAmount;
   }
 
-  public ItemStack getItemType () {
+  public ItemStack getItemType() {
     return stoneHandler.getReference();
   }
 
@@ -120,12 +115,12 @@ public class FabricatorTile extends EnergyTileEntity implements ITickableTileEnt
   }
 
   public class StoneHandler implements IItemHandler {
-    private Block block;
+    private Item item;
     private ItemStack reference;
 
-    public StoneHandler(Supplier<? extends Block> supplier) {
-      this.block = supplier.get();
-      this.reference = new ItemStack(block);
+    public StoneHandler(Supplier<? extends IItemProvider> supplier) {
+      this.item = supplier.get().asItem();
+      this.reference = new ItemStack(item);
     }
 
     public ItemStack getReference() {
@@ -140,7 +135,7 @@ public class FabricatorTile extends EnergyTileEntity implements ITickableTileEnt
     @Nonnull
     @Override
     public ItemStack getStackInSlot(int slot) {
-      return new ItemStack(block, stoneAmount);
+      return new ItemStack(item, stoneAmount);
     }
 
     @Nonnull
@@ -156,7 +151,7 @@ public class FabricatorTile extends EnergyTileEntity implements ITickableTileEnt
         if (!simulate) {
           stoneAmount -= amount;
         }
-        return new ItemStack(block, amount);
+        return new ItemStack(item, amount);
       } else {
         return ItemStack.EMPTY;
       }
