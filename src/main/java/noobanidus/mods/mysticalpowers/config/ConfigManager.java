@@ -36,7 +36,7 @@ public class ConfigManager {
     FABRICATOR_CONFIGS.add(new FabricatorConfig("clay", 1000000, 5000, 400, 65));
     FABRICATOR_CONFIGS.add(new FabricatorConfig("netherrack", 1000000, 5000, 50, 25));
     FABRICATOR_CONFIGS.add(new FabricatorConfig("soul_sand", 1000000, 5000, 400, 120));
-    FABRICATOR_CONFIGS.add(new FabricatorConfig("slime", 1000000, 5000, 5000, 600));
+    FABRICATOR_CONFIGS.add(new FabricatorConfig("slime", 1000000, 5000, 500, 70));
     FABRICATOR_CONFIGS.add(new FabricatorConfig("ice", 1000000, 5000, 250, 95));
     FABRICATOR_CONFIGS.add(new FabricatorConfig("snow", 1000000, 5000, 250, 95));
     FABRICATOR_CONFIGS.add(new FabricatorConfig("dirt", 1000000, 5000, 50, 25));
