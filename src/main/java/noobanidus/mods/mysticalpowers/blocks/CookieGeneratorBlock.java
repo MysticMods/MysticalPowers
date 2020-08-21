@@ -95,7 +95,7 @@ public class CookieGeneratorBlock extends Block {
   public static long lastSentMessage = 0;
 
   @Override
-  public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+  public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
     TileEntity te = worldIn.getTileEntity(pos);
     if (te != null) {
       te.getCapability(CapabilityEnergy.ENERGY).ifPresent((energy) -> {
@@ -106,7 +106,7 @@ public class CookieGeneratorBlock extends Block {
           }
         }
       });
-      return true;
+      return ActionResultType.SUCCESS;
     } else {
       return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
     }

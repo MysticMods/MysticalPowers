@@ -1,7 +1,7 @@
 package noobanidus.mods.mysticalpowers.init;
 
 import com.tterrag.registrate.providers.ProviderType;
-import com.tterrag.registrate.util.RegistryEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import epicsquid.mysticalworld.MWTags;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.Items;

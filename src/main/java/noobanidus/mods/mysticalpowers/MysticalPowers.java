@@ -10,9 +10,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import noobanidus.libs.noobutil.registrate.CustomRegistrate;
 import noobanidus.mods.mysticalpowers.config.ConfigManager;
 import noobanidus.mods.mysticalpowers.init.*;
-import noobanidus.mods.mysticalpowers.registrate.CustomRegistrate;
+import noobanidus.mods.mysticalpowers.setup.ClientInit;
 import noobanidus.mods.mysticalpowers.setup.ClientSetup;
 import noobanidus.mods.mysticalpowers.setup.ModSetup;
 import org.apache.logging.log4j.LogManager;
@@ -42,7 +43,7 @@ public class MysticalPowers {
     REGISTRATE.itemGroup(() -> ITEM_GROUP);
 
     modBus.addListener(setup::init);
-    DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> modBus.addListener(ClientSetup::init));
+    DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> ClientInit::init);
 
     ModItems.load();
     ModBlocks.load();

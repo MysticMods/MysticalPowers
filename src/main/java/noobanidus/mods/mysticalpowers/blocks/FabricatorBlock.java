@@ -5,7 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
@@ -27,7 +27,7 @@ public class FabricatorBlock extends Block {
   private final int FE_OPERATION;
   private final int FREQUENCY;
 
-  public FabricatorBlock(Properties properties, Supplier<? extends IItemProvider> block, int ... values) {
+  public FabricatorBlock(Properties properties, Supplier<? extends IItemProvider> block, int... values) {
     super(properties);
     this.block = block;
     if (values.length != 4) {
@@ -51,14 +51,14 @@ public class FabricatorBlock extends Block {
   }
 
   @Override
-  public BlockRenderLayer getRenderLayer() {
-    return BlockRenderLayer.CUTOUT;
+  public boolean isTransparent(BlockState p_220074_1_) {
+    return true;
   }
 
   public static long lastSentMessage = 0;
 
   @Override
-  public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+  public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
     TileEntity te = worldIn.getTileEntity(pos);
     if (te instanceof FabricatorTile) {
       if (!worldIn.isRemote) {
@@ -70,7 +70,7 @@ public class FabricatorBlock extends Block {
           lastSentMessage = System.currentTimeMillis();
         }
       }
-      return true;
+      return ActionResultType.SUCCESS;
     } else {
       return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
     }

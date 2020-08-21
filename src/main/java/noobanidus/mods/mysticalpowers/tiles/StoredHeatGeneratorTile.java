@@ -1,6 +1,5 @@
 package noobanidus.mods.mysticalpowers.tiles;
 
-import epicsquid.mysticallib.util.ItemUtil;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.ITickableTileEntity;
@@ -12,6 +11,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+import noobanidus.libs.noobutil.util.ItemUtil;
 import noobanidus.mods.mysticalpowers.capability.SettableEnergyStorage;
 import noobanidus.mods.mysticalpowers.init.ModTiles;
 

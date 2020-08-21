@@ -1,12 +1,11 @@
 package noobanidus.mods.mysticalpowers.blocks;
 
-import epicsquid.mysticallib.util.VoxelUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
@@ -17,6 +16,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import noobanidus.libs.noobutil.util.VoxelUtil;
 import noobanidus.mods.mysticalpowers.capability.SettableEnergyStorage;
 import noobanidus.mods.mysticalpowers.tiles.EndStoneFabricatorTile;
 
@@ -43,14 +43,14 @@ public class EndStoneFabricatorBlock extends Block {
   }
 
   @Override
-  public BlockRenderLayer getRenderLayer() {
-    return BlockRenderLayer.CUTOUT;
+  public boolean isTransparent(BlockState p_220074_1_) {
+    return true;
   }
 
   public static long lastSentMessage = 0;
 
   @Override
-  public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+  public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
     TileEntity te = worldIn.getTileEntity(pos);
     if (te instanceof EndStoneFabricatorTile) {
       if (!worldIn.isRemote) {
@@ -61,7 +61,7 @@ public class EndStoneFabricatorBlock extends Block {
           lastSentMessage = System.currentTimeMillis();
         }
       }
-      return true;
+      return ActionResultType.SUCCESS;
     } else {
       return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
     }

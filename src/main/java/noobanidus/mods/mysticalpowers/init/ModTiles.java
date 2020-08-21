@@ -1,6 +1,6 @@
 package noobanidus.mods.mysticalpowers.init;
 
-import com.tterrag.registrate.util.RegistryEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.tileentity.TileEntityType;
 import noobanidus.mods.mysticalpowers.tiles.CookieGeneratorTile;
 import noobanidus.mods.mysticalpowers.tiles.EndStoneFabricatorTile;

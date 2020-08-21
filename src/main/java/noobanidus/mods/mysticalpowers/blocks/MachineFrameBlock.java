@@ -3,7 +3,6 @@ package noobanidus.mods.mysticalpowers.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
-import net.minecraft.util.BlockRenderLayer;
 
 public class MachineFrameBlock extends Block {
   private MachineFrame type;
@@ -21,8 +20,9 @@ public class MachineFrameBlock extends Block {
     return BlockRenderType.MODEL;
   }
 
-  @Override
+  // TODO
+/*  @Override
   public BlockRenderLayer getRenderLayer() {
     return BlockRenderLayer.CUTOUT;
-  }
+  }*/
 }

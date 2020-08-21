@@ -2,7 +2,7 @@ package noobanidus.mods.mysticalpowers.events;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import com.tterrag.registrate.util.RegistryEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipeSerializer;
@@ -76,8 +76,7 @@ public class Mappings {
   }
 
   public static void load () {
-    // This is so ugly
-    List<RegistryEntry<?>> blocks = Lists.newArrayList(ModBlocks.COOKIE_GENERATOR, ModBlocks.WATER_FABRICATOR, ModBlocks.END_STONE_FABRICATOR, ModBlocks.SAND_FABRICATOR, ModBlocks.RED_SAND_FABRICATOR, ModBlocks.CLAY_FABRICATOR, ModBlocks.NETHERRACK_FABRICATOR, ModBlocks.SOUL_SAND_FABRICATOR, ModBlocks.SLIME_FABRICATOR, ModBlocks.ICE_FABRICATOR, ModBlocks.SNOW_FABRICATOR, ModBlocks.DIRT_FABRICATOR, ModBlocks.GRAVEL_FABRICATOR);
+/*    List<RegistryEntry<?>> blocks = Lists.newArrayList(ModBlocks.COOKIE_GENERATOR, ModBlocks.WATER_FABRICATOR, ModBlocks.END_STONE_FABRICATOR, ModBlocks.SAND_FABRICATOR, ModBlocks.RED_SAND_FABRICATOR, ModBlocks.CLAY_FABRICATOR, ModBlocks.NETHERRACK_FABRICATOR, ModBlocks.SOUL_SAND_FABRICATOR, ModBlocks.SLIME_FABRICATOR, ModBlocks.ICE_FABRICATOR, ModBlocks.SNOW_FABRICATOR, ModBlocks.DIRT_FABRICATOR, ModBlocks.GRAVEL_FABRICATOR);
     blocks.addAll(ModBlocks.MACHINE_FRAMES.values());
 
     mappings.put(ForgeRegistries.BLOCKS,
@@ -97,6 +96,6 @@ public class Mappings {
         makeMappings(ModSounds.COOKIE_MUNCH, ModSounds.END_STONE_GENERATE));
 
     mappings.put(ForgeRegistries.TILE_ENTITIES,
-        makeMappings(ModTiles.END_STONE_FABRICATOR, ModTiles.BLOCK_FABRICATOR, ModTiles.WATER_FABRICATOR, ModTiles.COOKIE_GENERATOR));
+        makeMappings(ModTiles.END_STONE_FABRICATOR, ModTiles.BLOCK_FABRICATOR, ModTiles.WATER_FABRICATOR, ModTiles.COOKIE_GENERATOR));*/
   }
 }

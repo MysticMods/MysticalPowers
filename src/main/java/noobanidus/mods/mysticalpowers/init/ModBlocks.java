@@ -1,6 +1,6 @@
 package noobanidus.mods.mysticalpowers.init;
 
-import com.tterrag.registrate.util.RegistryEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 import epicsquid.mysticalworld.MWTags;
@@ -25,7 +25,7 @@ import java.util.function.Supplier;
 import static noobanidus.mods.mysticalpowers.MysticalPowers.REGISTRATE;
 
 public class ModBlocks {
-  private static NonNullUnaryOperator<Block.Properties> FABRICATOR_PROPS = (o) -> o.hardnessAndResistance(4.5f).sound(SoundType.METAL);
+  private static NonNullUnaryOperator<Block.Properties> FABRICATOR_PROPS = (o) -> o.hardnessAndResistance(4.5f).sound(SoundType.METAL).notSolid();
 
   public static RegistryEntry<CookieGeneratorBlock> COOKIE_GENERATOR = REGISTRATE.block("cookie_generator", Material.IRON, CookieGeneratorBlock::new)
       .properties(o -> o.hardnessAndResistance(2.5f).sound(SoundType.METAL))
@@ -44,23 +44,23 @@ public class ModBlocks {
               .build(p)
       )
       .blockstate((ctx, p) ->
-          p.horizontalBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry())))
+          p.horizontalBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry())))
       ).register();
 
   public static RegistryEntry<InfiniteWaterFabricatorBlock> WATER_FABRICATOR = REGISTRATE.block("water_fabricator", Material.IRON, InfiniteWaterFabricatorBlock::new)
-      .properties(o -> o.hardnessAndResistance(4f).sound(SoundType.METAL))
+      .properties(o -> o.hardnessAndResistance(4f).sound(SoundType.METAL).notSolid())
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
       .blockstate((ctx, p) ->
-          p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry())))
+          p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry())))
       )
       .register();
 
   public static RegistryEntry<EndStoneFabricatorBlock> END_STONE_FABRICATOR = REGISTRATE.block("end_stone_fabricator", Material.IRON, EndStoneFabricatorBlock::new)
-      .properties(o -> o.hardnessAndResistance(4.5f).sound(SoundType.METAL))
+      .properties(o -> o.hardnessAndResistance(4.5f).sound(SoundType.METAL).notSolid())
       .blockstate((ctx, p) -> p.getVariantBuilder(ctx.getEntry()).forAllStates((state) -> ConfiguredModel.builder()
-          .modelFile(p.getExistingFile(new ResourceLocation(MysticalPowers.MODID, "block/end_stone_fabricator")))
+          .modelFile(p.models().getExistingFile(new ResourceLocation(MysticalPowers.MODID, "block/end_stone_fabricator")))
           .build()))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
@@ -78,7 +78,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> SAND_FABRICATOR = REGISTRATE.block("sand_fabricator", Material.IRON, fabricatorBlock(Blocks.SAND, "sand"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -86,7 +86,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> RED_SAND_FABRICATOR = REGISTRATE.block("red_sand_fabricator", Material.IRON, fabricatorBlock(Blocks.RED_SAND, "red_sand"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -94,7 +94,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> CLAY_FABRICATOR = REGISTRATE.block("clay_fabricator", Material.IRON, fabricatorBlock(Blocks.CLAY, "clay"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -102,7 +102,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> NETHERRACK_FABRICATOR = REGISTRATE.block("netherrack_fabricator", Material.IRON, fabricatorBlock(Blocks.NETHERRACK, "netherrack"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -110,7 +110,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> SOUL_SAND_FABRICATOR = REGISTRATE.block("soul_sand_fabricator", Material.IRON, fabricatorBlock(Blocks.SOUL_SAND, "soul_sand"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -118,7 +118,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> SLIME_FABRICATOR = REGISTRATE.block("slime_fabricator", Material.IRON, fabricatorBlock(Items.SLIME_BALL, "slime"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -126,7 +126,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> ICE_FABRICATOR = REGISTRATE.block("ice_fabricator", Material.IRON, fabricatorBlock(Blocks.ICE, "ice"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -134,7 +134,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> SNOW_FABRICATOR = REGISTRATE.block("snow_fabricator", Material.IRON, fabricatorBlock(Blocks.SNOW, "snow"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -142,7 +142,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> DIRT_FABRICATOR = REGISTRATE.block("dirt_fabricator", Material.IRON, fabricatorBlock(Blocks.DIRT, "dirt"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -150,7 +150,7 @@ public class ModBlocks {
 
   public static RegistryEntry<FabricatorBlock> GRAVEL_FABRICATOR = REGISTRATE.block("gravel_fabricator", Material.IRON, fabricatorBlock(Blocks.GRAVEL, "gravel"))
       .properties(FABRICATOR_PROPS)
-      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
       .item()
       .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
       .build()
@@ -164,7 +164,7 @@ public class ModBlocks {
 
       RegistryEntry<MachineFrameBlock> frameObject = REGISTRATE.block(frameName, Material.IRON, (b) -> new MachineFrameBlock(b, type))
           .properties(o -> o.hardnessAndResistance(2f).sound(SoundType.METAL))
-          .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.getExistingFile(type.model())))
+          .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(type.model())))
           .item()
           .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
           .build()

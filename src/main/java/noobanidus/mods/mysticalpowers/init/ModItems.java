@@ -1,6 +1,6 @@
 package noobanidus.mods.mysticalpowers.init;
 
-import com.tterrag.registrate.util.RegistryEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import epicsquid.mysticalworld.MWTags;
 import net.minecraftforge.common.Tags;
 import noobanidus.mods.mysticalpowers.MPTags;

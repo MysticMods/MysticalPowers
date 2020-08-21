@@ -7,7 +7,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
@@ -27,12 +27,16 @@ public class InfiniteWaterFabricatorBlock extends Block {
   }
 
   @Override
-  public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+  public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
     if (!worldIn.isRemote) {
-      return FluidUtil.interactWithFluidHandler(player, handIn, WaterFabricatorTile.WATER);
+      if (FluidUtil.interactWithFluidHandler(player, handIn, WaterFabricatorTile.WATER)) {
+        return ActionResultType.SUCCESS;
+      } else {
+        return ActionResultType.FAIL;
+      }
     }
 
-    return true;
+    return ActionResultType.SUCCESS;
   }
 
   @Override
@@ -41,8 +45,8 @@ public class InfiniteWaterFabricatorBlock extends Block {
   }
 
   @Override
-  public BlockRenderLayer getRenderLayer() {
-    return BlockRenderLayer.CUTOUT;
+  public boolean isTransparent(BlockState p_220074_1_) {
+    return true;
   }
 
   @Override

@@ -1,4 +1,4 @@
-package noobanidus.mods.mysticalpowers.blocks;
+/*package noobanidus.mods.mysticalpowers.blocks;
 
 import epicsquid.mysticallib.util.VoxelUtil;
 import net.minecraft.block.Block;
@@ -144,4 +144,4 @@ public class DragonfireForgeBlock extends Block {
     tooltip.add(new StringTextComponent(""));
     tooltip.add(new StringTextComponent("DOES NOTHING RIGHT NOW").setStyle(new Style().setColor(TextFormatting.RED).setBold(true)));
   }
-}
+}*/
