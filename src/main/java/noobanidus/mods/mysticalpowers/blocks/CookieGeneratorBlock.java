@@ -101,7 +101,7 @@ public class CookieGeneratorBlock extends Block {
       te.getCapability(CapabilityEnergy.ENERGY).ifPresent((energy) -> {
         if (!worldIn.isRemote) {
           if (System.currentTimeMillis() - lastSentMessage > 10) {
-            player.sendMessage(new TranslationTextComponent("mysticalpowers.tile.cookie_generator.contains", energy.getEnergyStored(), energy.getMaxEnergyStored()));
+            player.sendMessage(new TranslationTextComponent("mysticalpowers.tile.cookie_generator.contains", energy.getEnergyStored(), energy.getMaxEnergyStored()), Util.DUMMY_UUID);
             lastSentMessage = System.currentTimeMillis();
           }
         }

@@ -1,10 +1,11 @@
-modLoader="javafml" #mandatory
-loaderVersion="[31,)" #mandatory (26 is current forge version)
+modLoader="javafml" 
+loaderVersion="[35,)"  (26 is current forge version)
 issueTrackerURL="https://github.com/MysticMods/MysticalPowers/issues" #optional
-[[mods]] #mandatory
-modId="mysticalpowers" #mandatory
-version="${file.jarVersion}" #mandatory
-displayName="Mystical Machinery" #mandatory
+license="https://github.com/MysticMods/MysticalPowers/blob/1.14/LICENSE"
+[[mods]] 
+modId="mysticalpowers" 
+version="${file.jarVersion}" 
+displayName="Mystical Machinery" 
 displayURL="https://www.curseforge.com/minecraft/mc-mods/mystical-machiner"
 credits="" #optional
 authors="Noobanidus, 5B" #optional
@@ -12,20 +13,20 @@ description='''
 A small set of Forge Energy machines to liven up your world..
 '''
 [[dependencies.mysticalpowers]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="[31,)" #mandatory
+    modId="forge" 
+    mandatory=true 
+    versionRange="[35,)" 
     ordering="NONE"
     side="BOTH"
 [[dependencies.mysticalpowers]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.4,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.mysticalpowers]]
     modId="mysticalworld"
     mandatory=true
-    versionRange="[1.15.2-2.1,)"
+    versionRange="[1.16.4-0.3.1.3,)"
     ordering="NONE"
     side="BOTH"

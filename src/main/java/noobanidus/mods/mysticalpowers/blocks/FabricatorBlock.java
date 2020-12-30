@@ -8,6 +8,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.IItemProvider;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -66,7 +67,7 @@ public class FabricatorBlock extends Block {
           SettableEnergyStorage energy = ((FabricatorTile) te).getEnergyStorage();
           ItemStack type = ((FabricatorTile) te).getItemType();
           int amount = ((FabricatorTile) te).getAmount();
-          player.sendMessage(new TranslationTextComponent("mysticalpowers.tile.block_generator.contains", amount, type.getDisplayName(), energy.getEnergyStored(), energy.getMaxEnergyStored()));
+          player.sendMessage(new TranslationTextComponent("mysticalpowers.tile.block_generator.contains", amount, type.getDisplayName(), energy.getEnergyStored(), energy.getMaxEnergyStored()), Util.DUMMY_UUID);
           lastSentMessage = System.currentTimeMillis();
         }
       }

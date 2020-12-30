@@ -2,10 +2,7 @@ package noobanidus.mods.mysticalpowers.items;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.*;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
@@ -36,7 +33,6 @@ public class EnergyItem extends Item {
     this.max = max;
     this.input = input;
     this.output = output;
-    addPropertyOverride(new ResourceLocation(MysticalPowers.MODID, "charge"), (stack, world, entity) -> charge(stack));
   }
 
   @Override
@@ -55,7 +51,7 @@ public class EnergyItem extends Item {
     return super.isEnchantable(stack);
   }
 
-  private float charge(ItemStack stack) {
+  public static float charge(ItemStack stack) {
     LazyOptional<IEnergyStorage> opt = stack.getCapability(CapabilityEnergy.ENERGY);
     if (!opt.isPresent()) {
       return 0;

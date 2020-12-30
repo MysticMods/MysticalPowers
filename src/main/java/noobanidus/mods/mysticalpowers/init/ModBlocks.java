@@ -176,7 +176,7 @@ public class ModBlocks {
                   .key('X', type.getTag())
                   .key('G', Tags.Items.GLASS)
                   .key('I', Tags.Items.INGOTS_IRON)
-                  .addCriterion("has_" + type.getTag().getId(), p.hasItem(type.getTag()))
+                  .addCriterion("has_" + type.getTag().getName(), p.hasItem(type.getTag()))
                   .build(p)
           )
           .register();

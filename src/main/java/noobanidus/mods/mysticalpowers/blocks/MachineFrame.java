@@ -3,6 +3,7 @@ package noobanidus.mods.mysticalpowers.blocks;
 import epicsquid.mysticalworld.MWTags;
 import net.minecraft.item.Item;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
@@ -36,14 +37,14 @@ public enum MachineFrame {
   ;
 
   private String name;
-  private Tag<Item> tag;
+  private ITag.INamedTag<Item> tag;
 
-  MachineFrame(String name, Tag<Item> tag) {
+  MachineFrame(String name, ITag .INamedTag<Item> tag) {
     this.name = name;
     this.tag = tag;
   }
 
-  public Tag<Item> getTag() {
+  public ITag.INamedTag<Item> getTag() {
     return tag;
   }
 

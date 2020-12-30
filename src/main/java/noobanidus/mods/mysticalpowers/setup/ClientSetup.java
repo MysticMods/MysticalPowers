@@ -4,11 +4,16 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.ItemModelsProperties;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import noobanidus.mods.mysticalpowers.MysticalPowers;
 import noobanidus.mods.mysticalpowers.init.ModBlocks;
+import noobanidus.mods.mysticalpowers.init.ModItems;
+import noobanidus.mods.mysticalpowers.items.EnergyItem;
 
 @OnlyIn(Dist.CLIENT)
 public class ClientSetup {
@@ -33,6 +38,12 @@ public class ClientSetup {
 
       mc.getBlockColors().register((state, world, pos, index) -> Fluids.WATER.getAttributes().getColor(world, pos), ModBlocks.WATER_FABRICATOR.get());
       mc.getItemColors().register((p1, index) -> Fluids.WATER.getAttributes().getColor(), ModBlocks.WATER_FABRICATOR.get());
+
+      ItemModelsProperties.registerProperty(ModItems.POWERCELL_COPPER.get(), new ResourceLocation(MysticalPowers.MODID, "charge"), (stack, world, entity) -> EnergyItem.charge(stack));
+      ItemModelsProperties.registerProperty(ModItems.POWERCELL_LEAD.get(), new ResourceLocation(MysticalPowers.MODID, "charge"), (stack, world, entity) -> EnergyItem.charge(stack));
+      ItemModelsProperties.registerProperty(ModItems.POWERCELL_SILVER.get(), new ResourceLocation(MysticalPowers.MODID, "charge"), (stack, world, entity) -> EnergyItem.charge(stack));
+      ItemModelsProperties.registerProperty(ModItems.POWERCELL_TIN.get(), new ResourceLocation(MysticalPowers.MODID, "charge"), (stack, world, entity) -> EnergyItem.charge(stack));
+      ItemModelsProperties.registerProperty(ModItems.POWERCELL_QUICKSILVER.get(), new ResourceLocation(MysticalPowers.MODID, "charge"), (stack, world, entity) -> EnergyItem.charge(stack));
     });
   }
 }

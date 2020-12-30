@@ -1,5 +1,6 @@
 package noobanidus.mods.mysticalpowers.client.screen;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -20,30 +21,20 @@ public class StoredHeatGeneratorScreen extends ContainerScreen<StoredHeatGenerat
   }
 
   @Override
-  public void render(int p_render_1_, int p_render_2_, float p_render_3_) {
-    this.renderHoveredToolTip(p_render_1_, p_render_2_);
-  }
-
-  /**
-   * Draw the foreground layer for the GuiContainer (everything in front of the items)
-   */
-  @Override
-  protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-    String s = this.title.getFormattedText();
-    this.font.drawString(s, (float) (this.xSize / 2 - this.font.getStringWidth(s) / 2), 6.0F, 4210752);
-    this.font.drawString(this.playerInventory.getDisplayName().getFormattedText(), 8.0F, (float) (this.ySize - 96 + 2), 4210752);
+  public void render(MatrixStack stack, int p_render_1_, int p_render_2_, float p_render_3_) {
+    this.renderHoveredTooltip(stack, p_render_1_, p_render_2_);
   }
 
   /**
    * Draws the background layer of this container (behind the items).
    */
   @Override
-  protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
+  protected void drawGuiContainerBackgroundLayer(MatrixStack stack, float partialTicks, int mouseX, int mouseY) {
     RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
     this.minecraft.getTextureManager().bindTexture(guiTexture);
     int i = this.guiLeft;
     int j = this.guiTop;
-    this.blit(i, j, 0, 0, this.xSize, this.ySize);
+    this.blit(stack, i, j, 0, 0, this.xSize, this.ySize);
     /*
     if (((AbstractFurnaceContainer)this.container).func_217061_l()) {
       int k = ((AbstractFurnaceContainer)this.container).getBurnLeftScaled();

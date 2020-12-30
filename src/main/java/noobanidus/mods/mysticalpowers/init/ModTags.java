@@ -9,9 +9,9 @@ import static noobanidus.mods.mysticalpowers.MysticalPowers.REGISTRATE;
 public class ModTags {
   static {
     REGISTRATE.addDataGenerator(ProviderType.ITEM_TAGS, (p) -> {
-      p.getBuilder(MPTags.Items.COOKIES).add(Items.COOKIE).build(MPTags.Items.COOKIES.getId());
-      p.getBuilder(MPTags.Items.GENERATOR_COOKIES).add(MPTags.Items.COOKIES).build(MPTags.Items.GENERATOR_COOKIES.getId());
-      p.getBuilder(MPTags.Items.BASE_POWERCELL).add(ModItems.POWERCELL_LEAD.get(), ModItems.POWERCELL_TIN.get()).build(MPTags.Items.BASE_POWERCELL.getId());
+      p.getOrCreateBuilder(MPTags.Items.COOKIES).add(Items.COOKIE);
+      p.getOrCreateBuilder(MPTags.Items.GENERATOR_COOKIES).addTag(MPTags.Items.COOKIES);
+      p.getOrCreateBuilder(MPTags.Items.BASE_POWERCELL).add(ModItems.POWERCELL_LEAD.get(), ModItems.POWERCELL_TIN.get());
     });
   }
 

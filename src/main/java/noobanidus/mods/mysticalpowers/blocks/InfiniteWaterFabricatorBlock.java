@@ -65,6 +65,6 @@ public class InfiniteWaterFabricatorBlock extends Block {
     super.addInformation(stack, worldIn, tooltip, flagIn);
 
     tooltip.add(new StringTextComponent(""));
-    tooltip.add(new TranslationTextComponent("mysticalpowers.water_fabricator.tooltip").setStyle(new Style().setColor(TextFormatting.AQUA).setBold(true)));
+    tooltip.add(new TranslationTextComponent("mysticalpowers.water_fabricator.tooltip").setStyle(Style.EMPTY.setColor(Color.fromTextFormatting(TextFormatting.AQUA)).setBold(true)));
   }
 }

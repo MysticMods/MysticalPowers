@@ -1,5 +1,7 @@
 package noobanidus.mods.mysticalpowers.tiles;
 
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;
@@ -36,8 +38,8 @@ public abstract class EnergyTileEntity extends TileEntity implements IEnergyTile
   }
 
   @Override
-  public void read(CompoundNBT compound) {
-    super.read(compound);
+  public void read(BlockState state, CompoundNBT compound) {
+    super.read(state, compound);
     this.energyStorage.setEnergy(compound.getInt("Energy"));
   }
 
@@ -56,7 +58,7 @@ public abstract class EnergyTileEntity extends TileEntity implements IEnergyTile
 
   @Override
   public void onDataPacket(NetworkManager net, SUpdateTileEntityPacket pkt) {
-    read(pkt.getNbtCompound());
+    read(Blocks.AIR.getDefaultState(), pkt.getNbtCompound());
   }
 
   @Override

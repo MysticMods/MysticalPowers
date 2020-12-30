@@ -7,6 +7,7 @@ import net.minecraft.particles.ParticleTypes;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -57,7 +58,7 @@ public class EndStoneFabricatorBlock extends Block {
         if (System.currentTimeMillis() - lastSentMessage > 10) {
           SettableEnergyStorage energy = ((EndStoneFabricatorTile) te).getEnergyStorage();
           int amount = ((EndStoneFabricatorTile) te).getAmount();
-          player.sendMessage(new TranslationTextComponent("mysticalpowers.tile.end_stone_generator.contains", amount, energy.getEnergyStored(), energy.getMaxEnergyStored()));
+          player.sendMessage(new TranslationTextComponent("mysticalpowers.tile.end_stone_generator.contains", amount, energy.getEnergyStored(), energy.getMaxEnergyStored()), Util.DUMMY_UUID);
           lastSentMessage = System.currentTimeMillis();
         }
       }
