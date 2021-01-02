@@ -1,4 +1,4 @@
-package noobanidus.mods.mysticalpowers.tiles;
+/*package noobanidus.mods.mysticalpowers.tiles;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -48,4 +48,4 @@ public class DragonfireForgeTile extends EnergyTileEntity implements ITickableTi
   @Override
   public void tick() {
   }
-}
+}*/

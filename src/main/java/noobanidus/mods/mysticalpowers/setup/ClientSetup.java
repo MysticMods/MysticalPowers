@@ -33,6 +33,7 @@ public class ClientSetup {
       RenderTypeLookup.setRenderLayer(ModBlocks.SNOW_FABRICATOR.get(), cutout);
       RenderTypeLookup.setRenderLayer(ModBlocks.DIRT_FABRICATOR.get(), cutout);
       RenderTypeLookup.setRenderLayer(ModBlocks.GRAVEL_FABRICATOR.get(), cutout);
+      RenderTypeLookup.setRenderLayer(ModBlocks.INFINITY_GENERATOR.get(), cutout);
       ModBlocks.MACHINE_FRAMES.values().forEach(o -> RenderTypeLookup.setRenderLayer(o.get(), cutout));
       Minecraft mc = Minecraft.getInstance();
 

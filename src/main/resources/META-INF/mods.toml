@@ -1,5 +1,5 @@
 modLoader="javafml" 
-loaderVersion="[35,)"  (26 is current forge version)
+loaderVersion="[35,)"
 issueTrackerURL="https://github.com/MysticMods/MysticalPowers/issues" #optional
 license="https://github.com/MysticMods/MysticalPowers/blob/1.14/LICENSE"
 [[mods]] 

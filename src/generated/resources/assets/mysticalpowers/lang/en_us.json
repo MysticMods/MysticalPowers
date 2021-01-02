@@ -6,6 +6,7 @@
   "block.mysticalpowers.end_stone_fabricator": "End Stone Fabricator",
   "block.mysticalpowers.gravel_fabricator": "Gravel Fabricator",
   "block.mysticalpowers.ice_fabricator": "Ice Fabricator",
+  "block.mysticalpowers.infinity_generator": "Infinity Generator",
   "block.mysticalpowers.lapis_machine_frame": "Lapis Machine Frame",
   "block.mysticalpowers.nether_machine_frame": "Nether Machine Frame",
   "block.mysticalpowers.netherrack_fabricator": "Netherrack Fabricator",
@@ -36,5 +37,6 @@
   "mysticalpowers.tile.block_generator.contains": "Contains %s %s (%s/%s FE)",
   "mysticalpowers.tile.cookie_generator.contains": "Contains %s/%sFCE (Forge Cookie Energy)",
   "mysticalpowers.tile.end_stone_generator.contains": "Contains %s End Stone (%s/%s FE)",
+  "mysticalpowers.tile.infinity_generator.contains": "Contains %s/%sFE (Forge Energy)",
   "mysticalpowers.water_fabricator.tooltip": "Acts as an infinite water source. Does not require power."
 }

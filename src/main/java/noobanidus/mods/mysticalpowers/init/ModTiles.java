@@ -2,10 +2,7 @@ package noobanidus.mods.mysticalpowers.init;
 
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.tileentity.TileEntityType;
-import noobanidus.mods.mysticalpowers.tiles.CookieGeneratorTile;
-import noobanidus.mods.mysticalpowers.tiles.EndStoneFabricatorTile;
-import noobanidus.mods.mysticalpowers.tiles.FabricatorTile;
-import noobanidus.mods.mysticalpowers.tiles.WaterFabricatorTile;
+import noobanidus.mods.mysticalpowers.tiles.*;
 
 import static noobanidus.mods.mysticalpowers.MysticalPowers.REGISTRATE;
 
@@ -33,6 +30,10 @@ public class ModTiles {
 
   public static final RegistryEntry<TileEntityType<CookieGeneratorTile>> COOKIE_GENERATOR = REGISTRATE.tileEntity("cookie_generator", CookieGeneratorTile::new)
       .validBlock(ModBlocks.COOKIE_GENERATOR)
+      .register();
+
+  public static final RegistryEntry<TileEntityType<InfinityGeneratorTile>> INFINITY_GENERATOR = REGISTRATE.tileEntity("infinity_generator", InfinityGeneratorTile::new)
+      .validBlock(ModBlocks.INFINITY_GENERATOR)
       .register();
 
   public static void load() {

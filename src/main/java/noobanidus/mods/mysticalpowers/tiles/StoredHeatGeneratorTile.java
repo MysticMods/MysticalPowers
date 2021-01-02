@@ -1,4 +1,4 @@
-package noobanidus.mods.mysticalpowers.tiles;
+/*package noobanidus.mods.mysticalpowers.tiles;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -154,4 +154,4 @@ public class StoredHeatGeneratorTile extends EnergyTileEntity implements ITickab
       return ForgeHooks.getBurnTime(stack) > 0;
     }
   }
-}
+}*/

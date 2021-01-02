@@ -1,3 +1,4 @@
+/*
 package noobanidus.mods.mysticalpowers.client.screen;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -25,9 +26,11 @@ public class StoredHeatGeneratorScreen extends ContainerScreen<StoredHeatGenerat
     this.renderHoveredTooltip(stack, p_render_1_, p_render_2_);
   }
 
-  /**
+  */
+/**
    * Draws the background layer of this container (behind the items).
-   */
+   *//*
+
   @Override
   protected void drawGuiContainerBackgroundLayer(MatrixStack stack, float partialTicks, int mouseX, int mouseY) {
     RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -35,14 +38,17 @@ public class StoredHeatGeneratorScreen extends ContainerScreen<StoredHeatGenerat
     int i = this.guiLeft;
     int j = this.guiTop;
     this.blit(stack, i, j, 0, 0, this.xSize, this.ySize);
-    /*
+    */
+/*
     if (((AbstractFurnaceContainer)this.container).func_217061_l()) {
       int k = ((AbstractFurnaceContainer)this.container).getBurnLeftScaled();
       this.blit(i + 56, j + 36 + 12 - k, 176, 12 - k, 14, k + 1);
     }
 
     int l = ((AbstractFurnaceContainer)this.container).getCookProgressionScaled();
-    this.blit(i + 79, j + 34, 176, 14, l + 1, 16);*/
+    this.blit(i + 79, j + 34, 176, 14, l + 1, 16);*//*
+
   }
 }
+*/
 

@@ -6,6 +6,7 @@
   "block.mysticalpowers.end_stone_fabricator": "\u0279o\u0287\u0250\u0254\u0131\u0279q\u0250\u2132 \u01DDuo\u0287S pu\u018E",
   "block.mysticalpowers.gravel_fabricator": "\u0279o\u0287\u0250\u0254\u0131\u0279q\u0250\u2132 \u05DF\u01DD\u028C\u0250\u0279\u2141",
   "block.mysticalpowers.ice_fabricator": "\u0279o\u0287\u0250\u0254\u0131\u0279q\u0250\u2132 \u01DD\u0254I",
+  "block.mysticalpowers.infinity_generator": "\u0279o\u0287\u0250\u0279\u01DDu\u01DD\u2141 \u028E\u0287\u0131u\u0131\u025FuI",
   "block.mysticalpowers.lapis_machine_frame": "\u01DD\u026F\u0250\u0279\u2132 \u01DDu\u0131\u0265\u0254\u0250W s\u0131d\u0250\uA780",
   "block.mysticalpowers.nether_machine_frame": "\u01DD\u026F\u0250\u0279\u2132 \u01DDu\u0131\u0265\u0254\u0250W \u0279\u01DD\u0265\u0287\u01DDN",
   "block.mysticalpowers.netherrack_fabricator": "\u0279o\u0287\u0250\u0254\u0131\u0279q\u0250\u2132 \u029E\u0254\u0250\u0279\u0279\u01DD\u0265\u0287\u01DDN",
@@ -36,5 +37,6 @@
   "mysticalpowers.tile.block_generator.contains": ")\u018E\u2132 %s/%s( %s %s su\u0131\u0250\u0287uo\u0186",
   "mysticalpowers.tile.cookie_generator.contains": ")\u028Eb\u0279\u01DDu\u018E \u01DD\u0131\u029Eoo\u0186 \u01DDb\u0279o\u2132( \u018E\u0186\u2132%s/%s su\u0131\u0250\u0287uo\u0186",
   "mysticalpowers.tile.end_stone_generator.contains": ")\u018E\u2132 %s/%s( \u01DDuo\u0287S pu\u018E %s su\u0131\u0250\u0287uo\u0186",
+  "mysticalpowers.tile.infinity_generator.contains": ")\u028Eb\u0279\u01DDu\u018E \u01DDb\u0279o\u2132( \u018E\u2132%s/%s su\u0131\u0250\u0287uo\u0186",
   "mysticalpowers.water_fabricator.tooltip": "\u02D9\u0279\u01DD\u028Dod \u01DD\u0279\u0131nb\u01DD\u0279 \u0287ou s\u01DDo\u15E1 \u02D9\u01DD\u0254\u0279nos \u0279\u01DD\u0287\u0250\u028D \u01DD\u0287\u0131u\u0131\u025Fu\u0131 u\u0250 s\u0250 s\u0287\u0254\u2C6F"
 }

@@ -1,5 +1,6 @@
 package noobanidus.mods.mysticalpowers.tiles;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -57,7 +58,7 @@ public class FabricatorTile extends EnergyTileEntity implements ITickableTileEnt
   }
 
   @Override
-  public void read(CompoundNBT compound) {
+  public void read(BlockState state, CompoundNBT compound) {
     this.stoneAmount = compound.getInt("StoneAmount");
     this.FE_OPERATION = compound.getInt("FE_OPERATION");
     this.FREQUENCY = compound.getInt("FREQUENCY");
@@ -72,7 +73,7 @@ public class FabricatorTile extends EnergyTileEntity implements ITickableTileEnt
       this.stoneHandler = new StoneHandler(block);
       this.stoneCapability = LazyOptional.of(() -> this.stoneHandler);
     }
-    super.read(compound);
+    super.read(state, compound);
   }
 
   @Override

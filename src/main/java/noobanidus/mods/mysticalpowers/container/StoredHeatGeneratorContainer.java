@@ -1,4 +1,4 @@
-package noobanidus.mods.mysticalpowers.container;
+/*package noobanidus.mods.mysticalpowers.container;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.container.Container;
@@ -32,4 +32,4 @@ public class StoredHeatGeneratorContainer extends Container {
   public IIntArray getFurnaceData() {
     return furnaceData;
   }
-}
+}*/

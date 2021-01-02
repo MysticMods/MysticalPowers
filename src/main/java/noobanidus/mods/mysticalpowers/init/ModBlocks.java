@@ -10,6 +10,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.Items;
+import net.minecraft.item.Rarity;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -46,6 +47,15 @@ public class ModBlocks {
       .blockstate((ctx, p) ->
           p.horizontalBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry())))
       ).register();
+
+  public static RegistryEntry<InfinityGeneratorBlock> INFINITY_GENERATOR = REGISTRATE.block("infinity_generator", Material.IRON, InfinityGeneratorBlock::new)
+      .properties(o -> o.hardnessAndResistance(15.0f).sound(SoundType.CHAIN).setLightLevel((state) -> 15))
+      .item()
+      .properties(o -> o.rarity(Rarity.EPIC))
+      .model((ctx, p) -> p.blockItem(() -> ctx.getEntry().getBlock()))
+      .build()
+      .blockstate((ctx, p) -> p.simpleBlock(ctx.getEntry(), p.models().getExistingFile(p.blockTexture(ctx.getEntry()))))
+      .register();
 
   public static RegistryEntry<InfiniteWaterFabricatorBlock> WATER_FABRICATOR = REGISTRATE.block("water_fabricator", Material.IRON, InfiniteWaterFabricatorBlock::new)
       .properties(o -> o.hardnessAndResistance(4f).sound(SoundType.METAL).notSolid())
