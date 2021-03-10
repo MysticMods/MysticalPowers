@@ -1,7 +1,6 @@
 package noobanidus.mods.mysticalpowers.init;
 
 import com.tterrag.registrate.util.entry.RegistryEntry;
-import epicsquid.mysticalworld.MWTags;
 import net.minecraftforge.common.Tags;
 import noobanidus.mods.mysticalpowers.MPTags;
 import noobanidus.mods.mysticalpowers.items.EnergyItem;
@@ -16,10 +15,10 @@ public class ModItems {
               .patternLine("LRL")
               .patternLine("RBR")
               .patternLine("LRL")
-              .key('L', MWTags.Items.TIN_INGOT)
+              .key('L', MPTags.Items.TIN_INGOT)
               .key('R', Tags.Items.DUSTS_REDSTONE)
               .key('B', Tags.Items.STORAGE_BLOCKS_REDSTONE)
-              .addCriterion("has_tin", p.hasItem(MWTags.Items.TIN_INGOT))
+              .addCriterion("has_tin", p.hasItem(MPTags.Items.TIN_INGOT))
               .addCriterion("has_redstone", p.hasItem(Tags.Items.DUSTS_REDSTONE))
               .build(p)
       )
@@ -31,10 +30,10 @@ public class ModItems {
               .patternLine("LRL")
               .patternLine("RBR")
               .patternLine("LRL")
-              .key('L', MWTags.Items.LEAD_INGOT)
+              .key('L', MPTags.Items.LEAD_INGOT)
               .key('B', Tags.Items.STORAGE_BLOCKS_REDSTONE)
               .key('R', Tags.Items.DUSTS_REDSTONE)
-              .addCriterion("has_lead", p.hasItem(MWTags.Items.LEAD_INGOT))
+              .addCriterion("has_lead", p.hasItem(MPTags.Items.LEAD_INGOT))
               .addCriterion("has_redstone", p.hasItem(Tags.Items.DUSTS_REDSTONE))
               .build(p)
       )
@@ -46,7 +45,7 @@ public class ModItems {
               .patternLine("CPC")
               .patternLine("RPR")
               .patternLine("CPC")
-              .key('C', MWTags.Items.COPPER_INGOT)
+              .key('C', MPTags.Items.COPPER_INGOT)
               .key('P', MPTags.Items.BASE_POWERCELL)
               .key('R', Tags.Items.DUSTS_REDSTONE)
               .addCriterion("has_lead", p.hasItem(ModItems.POWERCELL_LEAD.get()))
@@ -59,7 +58,7 @@ public class ModItems {
               .patternLine("CPC")
               .patternLine("RPR")
               .patternLine("CPC")
-              .key('C', MWTags.Items.SILVER_INGOT)
+              .key('C', MPTags.Items.SILVER_INGOT)
               .key('P', ModItems.POWERCELL_COPPER.get())
               .key('R', Tags.Items.DUSTS_REDSTONE)
               .addCriterion("has_copper", p.hasItem(ModItems.POWERCELL_COPPER.get()))
@@ -73,7 +72,7 @@ public class ModItems {
               .patternLine("CCC")
               .patternLine("LBL")
               .patternLine("CLC")
-              .key('C', MWTags.Items.QUICKSILVER_INGOT)
+              .key('C', MPTags.Items.QUICKSILVER_INGOT)
               .key('L', ModItems.POWERCELL_SILVER.get())
               .key('B', Tags.Items.STORAGE_BLOCKS_REDSTONE)
               .addCriterion("has_silver", p.hasItem(ModItems.POWERCELL_COPPER.get()))

@@ -2,11 +2,11 @@ package noobanidus.mods.mysticalpowers.init;
 
 import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.util.entry.RegistryEntry;
-import epicsquid.mysticalworld.MWTags;
 import net.minecraft.data.ShapedRecipeBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
+import noobanidus.mods.mysticalpowers.MPTags;
 import noobanidus.mods.mysticalpowers.blocks.MachineFrame;
 import noobanidus.mods.mysticalpowers.recipes.BatteryRecipe;
 
@@ -43,7 +43,7 @@ public class ModRecipes {
           .patternLine("TMT")
           .patternLine("CHC")
           .key('M', ModBlocks.MACHINE_FRAMES.get(MachineFrame.TERRACOTTA).get())
-          .key('T', MWTags.Items.TIN_INGOT)
+          .key('T', MPTags.Items.TIN_INGOT)
           .key('S', ItemTags.SAND)
           .key('C', Items.CUT_SANDSTONE)
           .key('H', Items.CHISELED_SANDSTONE)
@@ -55,7 +55,7 @@ public class ModRecipes {
           .patternLine("TMT")
           .patternLine("CHC")
           .key('M', ModBlocks.MACHINE_FRAMES.get(MachineFrame.TERRACOTTA).get())
-          .key('T', MWTags.Items.TIN_INGOT)
+          .key('T', MPTags.Items.TIN_INGOT)
           .key('S', Tags.Items.STORAGE_BLOCKS_REDSTONE)
           .key('C', Items.CUT_SANDSTONE)
           .key('H', Items.CHISELED_SANDSTONE)
@@ -102,7 +102,7 @@ public class ModRecipes {
           .patternLine("GGG")
           .key('M', ModBlocks.MACHINE_FRAMES.get(MachineFrame.SLIME).get())
           .key('S', Items.SLIME_BALL)
-          .key('C', MWTags.Items.COPPER_BLOCK)
+          .key('C', MPTags.Items.COPPER_BLOCK)
           .key('G', Items.GREEN_GLAZED_TERRACOTTA)
           .addCriterion("has_slime", p.hasItem(Items.SLIME_BALL))
           .build(p);
@@ -112,10 +112,10 @@ public class ModRecipes {
           .patternLine("QMQ")
           .patternLine("LLL")
           .key('M', ModBlocks.MACHINE_FRAMES.get(MachineFrame.QUICKSILVER).get())
-          .key('Q', MWTags.Items.QUICKSILVER_INGOT)
+          .key('Q', MPTags.Items.QUICKSILVER_INGOT)
           .key('W', Items.WATER_BUCKET)
           .key('L', Items.LIGHT_BLUE_WOOL)
-          .addCriterion("has_quicksilver", p.hasItem(MWTags.Items.QUICKSILVER_INGOT))
+          .addCriterion("has_quicksilver", p.hasItem(MPTags.Items.QUICKSILVER_INGOT))
           .build(p);
 
       ShapedRecipeBuilder.shapedRecipe(ModBlocks.SNOW_FABRICATOR.get(), 1)
@@ -123,10 +123,10 @@ public class ModRecipes {
           .patternLine("QMQ")
           .patternLine("LLL")
           .key('M', ModBlocks.MACHINE_FRAMES.get(MachineFrame.QUICKSILVER).get())
-          .key('Q', MWTags.Items.QUICKSILVER_INGOT)
+          .key('Q', MPTags.Items.QUICKSILVER_INGOT)
           .key('W', Items.WATER_BUCKET)
           .key('L', Items.WHITE_WOOL)
-          .addCriterion("has_quicksilver", p.hasItem(MWTags.Items.QUICKSILVER_INGOT))
+          .addCriterion("has_quicksilver", p.hasItem(MPTags.Items.QUICKSILVER_INGOT))
           .build(p);
 
       ShapedRecipeBuilder.shapedRecipe(ModBlocks.DIRT_FABRICATOR.get(), 1)

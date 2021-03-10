@@ -3,7 +3,6 @@ package noobanidus.mods.mysticalpowers.init;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
-import epicsquid.mysticalworld.MWTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
@@ -15,6 +14,7 @@ import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.Tags;
+import noobanidus.mods.mysticalpowers.MPTags;
 import noobanidus.mods.mysticalpowers.MysticalPowers;
 import noobanidus.mods.mysticalpowers.blocks.*;
 import noobanidus.mods.mysticalpowers.config.ConfigManager;
@@ -38,7 +38,7 @@ public class ModBlocks {
               .patternLine("TCT")
               .patternLine("CMC")
               .patternLine("TCT")
-              .key('T', MWTags.Items.TIN_INGOT)
+              .key('T', MPTags.Items.TIN_INGOT)
               .key('C', Items.COOKIE)
               .key('M', ModBlocks.MACHINE_FRAMES.get(MachineFrame.LAPIS).get())
               .addCriterion("has_cookie", p.hasItem(Items.COOKIE))
