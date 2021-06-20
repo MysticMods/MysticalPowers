@@ -4,7 +4,7 @@ issueTrackerURL="https://github.com/MysticMods/MysticalPowers/issues" #optional
 license="https://github.com/MysticMods/MysticalPowers/blob/1.14/LICENSE"
 [[mods]] 
 modId="mysticalpowers" 
-version="${file.jarVersion}" 
+version="${version}"
 displayName="Mystical Machinery" 
 displayURL="https://www.curseforge.com/minecraft/mc-mods/mystical-machiner"
 credits="" #optional
@@ -27,6 +27,6 @@ A small set of Forge Energy machines to liven up your world..
 [[dependencies.mysticalpowers]]
     modId="mysticalworld"
     mandatory=true
-    versionRange="[1.16.4-0.3.1.3,)"
+    versionRange="[0.3.1.3,)"
     ordering="NONE"
     side="BOTH"
