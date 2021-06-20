@@ -2,9 +2,9 @@ package noobanidus.mods.mysticalpowers.init;
 
 import com.tterrag.registrate.providers.ProviderType;
 import com.tterrag.registrate.providers.RegistrateTagsProvider;
-import epicsquid.mysticalworld.MWTags;
-import epicsquid.mysticalworld.init.ModBlocks;
-import epicsquid.mysticalworld.init.ModMaterials;
+import mysticmods.mysticalworld.MWTags;
+import mysticmods.mysticalworld.init.ModBlocks;
+import mysticmods.mysticalworld.init.ModMaterials;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;

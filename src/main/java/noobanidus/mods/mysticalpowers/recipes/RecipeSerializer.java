@@ -2,7 +2,7 @@ package noobanidus.mods.mysticalpowers.recipes;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import epicsquid.mysticalworld.recipe.AbstractCookingRecipeSerializer;
+import mysticmods.mysticalworld.recipe.AbstractCookingRecipeSerializer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.AbstractCookingRecipe;
