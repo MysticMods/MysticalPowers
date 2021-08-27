@@ -8,6 +8,5 @@ public class ModSetup {
   }
 
   public void init(FMLCommonSetupEvent event) {
-    Mappings.load();
   }
 }
